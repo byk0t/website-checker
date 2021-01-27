@@ -31,7 +31,6 @@ class Storage:
     def flush_buffer(self):
         sql = self._buffer2sql()
         if sql is not None:
-            print(sql)
             self._execute_sql(sql)
         self.buffer = []
 
